@@ -43,7 +43,7 @@ function AboutPage() {
           </h1>
           <p className="mt-7 text-lg text-charcoal/80 max-w-xl leading-relaxed">
             {data.storyTeaserBody ||
-              `${data.name} has been the unofficial canteen, study spot, breakup HQ, and birthday venue of Satya Niketan for over a decade. We're small on purpose.`}
+              `${data.name} has been the vibrant gathering place, celebration spot, and party venue of Hudson Lane. We bring great food and unforgettable vibes together.`}
           </p>
         </div>
         <div className="md:col-span-5 relative h-[420px]">

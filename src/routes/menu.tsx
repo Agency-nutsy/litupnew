@@ -86,10 +86,7 @@ function MenuPage() {
         <h1 className="mt-2 text-5xl md:text-6xl lg:text-7xl leading-[0.95]">
           Everything <span className="marker-underline">we make.</span>
         </h1>
-        <p className="mt-5 text-charcoal/70 text-lg">
-          Prices are pocket-friendly on purpose. Star marks the things our regulars order on autopilot.
-        </p>
-        <p className="mt-2 text-xs uppercase tracking-widest text-charcoal/50">Prices are indicative · please confirm at the cafe</p>
+        <p className="mt-5 text-xs uppercase tracking-widest text-charcoal/50">Prices are indicative · please confirm at the cafe</p>
       </div>
 
       {/* Category pills */}

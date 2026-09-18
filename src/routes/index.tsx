@@ -95,25 +95,29 @@ function Home() {
                   Find us / book a table
                 </Link>
               </div>
-              <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-charcoal/70">
-                {heroStats.map((s, i) => (
-                  <span key={i}>{s}</span>
-                ))}
-              </div>
+              {heroStats && heroStats.length > 0 && (
+                <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-charcoal/70">
+                  {heroStats.map((s, i) => (
+                    <span key={i}>{s}</span>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Collage */}
-            <div className="lg:col-span-5 relative h-[380px] sm:h-[440px] lg:h-[560px]">
-              <div className="absolute top-0 right-0 sm:right-4 w-40 sm:w-56 h-56 sm:h-72 rounded-md overflow-hidden shadow-xl rotate-[4deg] hover:rotate-0 transition-transform duration-500 tape">
-                <img src={heroCollagePhotos[0]} alt={heroCollageAlts[0]} className="h-full w-full object-cover" />
+            <div className="lg:col-span-5 relative h-[460px] sm:h-[500px] lg:h-[560px] mt-8 lg:mt-0">
+              
+              {/* Image 1 - Top Right */}
+              <div className="absolute top-0 right-0 sm:top-4 sm:right-8 w-56 sm:w-80 h-56 sm:h-80 rounded-full overflow-hidden shadow-xl ring-8 ring-cream/50 z-20 group">
+                <img src={heroCollagePhotos[0]} alt={heroCollageAlts[0]} className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
               </div>
-              <div className="absolute top-28 sm:top-32 left-0 w-48 sm:w-60 h-36 sm:h-44 rounded-md overflow-hidden shadow-xl -rotate-[5deg] hover:rotate-0 transition-transform duration-500 tape">
-                <img src={heroCollagePhotos[1]} alt={heroCollageAlts[1]} className="h-full w-full object-cover" />
+
+              {/* Image 2 - Bottom Left */}
+              <div className="absolute bottom-12 left-0 sm:bottom-8 sm:left-4 w-64 sm:w-96 h-64 sm:h-96 rounded-full overflow-hidden shadow-2xl ring-8 ring-cream/50 z-30 group">
+                <img src={heroCollagePhotos[1]} alt={heroCollageAlts[1]} className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
               </div>
-              <div className="absolute bottom-0 right-0 w-52 sm:w-72 h-44 sm:h-56 rounded-md overflow-hidden shadow-2xl rotate-[2deg] hover:rotate-0 transition-transform duration-500 tape">
-                <img src={heroCollagePhotos[2]} alt={heroCollageAlts[2]} className="h-full w-full object-cover" />
-              </div>
-              <div className="absolute bottom-16 left-8 hidden lg:block font-script text-sage text-2xl rotate-[-8deg]">
+
+              <div className="absolute bottom-4 left-16 hidden lg:block font-script text-sage text-2xl rotate-[-8deg] z-40">
                 {heroCollageAnnotation}
               </div>
             </div>
@@ -196,12 +200,9 @@ function Home() {
                   />
                 </div>
                 <div className="p-4">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold text-coral">
-                      <span className={s.veg ? "veg-dot" : "nonveg-dot"} /> {s.tag || "Special"}
-                    </span>
-                    <span className="font-display text-lg font-bold">{s.price}</span>
-                  </div>
+                  <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold text-coral">
+                    <span className={s.veg ? "veg-dot" : "nonveg-dot"} /> {s.tag || "Special"}
+                  </span>
                   <h3 className="mt-2 text-lg leading-tight font-black">{s.name}</h3>
                 </div>
               </article>

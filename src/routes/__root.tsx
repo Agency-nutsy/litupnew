@@ -105,10 +105,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { property: "og:title", content: meta.title },
         { property: "og:description", content: meta.description },
         { property: "og:type", content: "website" },
-        ...(meta.ogImage ? [{ property: "og:image", content: meta.ogImage }] : []),
-        { name: "twitter:card", content: "summary" },
+        { property: "og:image", content: meta.ogImage || data?.logoUrl || defaultRestaurantData.logoUrl },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [
+        { rel: "icon", type: "image/png", href: data?.logoUrl || "/logo.png" },
         {
           rel: "stylesheet",
           href: appCss,
@@ -175,17 +176,9 @@ function GlobalLoadingScreen({
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
               className="mb-6 drop-shadow-xl"
             >
-              <img src={logoUrl} alt={name} className="h-32 sm:h-40 w-auto object-contain" />
+              <img src={logoUrl} alt={name} className="h-40 sm:h-56 w-auto object-contain" />
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              className="font-display text-5xl md:text-7xl text-charcoal tracking-tight uppercase"
-            >
-              {name}
-            </motion.h1>
 
             <motion.div
               initial={{ opacity: 0 }}

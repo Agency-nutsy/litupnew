@@ -43,9 +43,9 @@ export function SiteFooter({
         <div className="md:col-span-2">
           {logoUrl && (
             <img
-              src={logoUrl}
+              src="/logo-gold.png"
               alt={name}
-              className="h-12 w-auto object-contain mb-4 drop-shadow-md"
+              className="h-14 w-auto object-contain mb-4 drop-shadow-md"
             />
           )}
           <div className="font-display text-3xl leading-tight">
