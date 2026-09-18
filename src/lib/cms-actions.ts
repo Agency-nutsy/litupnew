@@ -9,7 +9,7 @@
  *   - Password compared against CMS_ADMIN_PASSWORD env var (plain string compare).
  *   - On success, an HMAC token is stored in an httpOnly cookie `cms_session`.
  *   - Subsequent requests verify the cookie matches the expected token.
- *   - Token is deterministic: HMAC-SHA256(password, 'amigos-cms-salt').
+ *   - Token is deterministic: HMAC-SHA256(password, 'litup-cms-salt').
  *     If you rotate the password, all existing sessions instantly invalidate.
  */
 
@@ -22,7 +22,7 @@ import type { RestaurantData } from "./restaurant-data";
 /** Compute the expected cookie value for the current password. */
 function expectedToken(): string {
   const password = process.env.CMS_ADMIN_PASSWORD ?? "";
-  return createHmac("sha256", "amigos-cms-salt").update(password).digest("hex");
+  return createHmac("sha256", "litup-cms-salt").update(password).digest("hex");
 }
 
 /** Read cms_session cookie from the current request. */
@@ -208,12 +208,12 @@ export const fetchGoogleReviewsFn = createServerFn({ method: "POST" })
     }
 
     // 4. Intelligent fallback with top-rated 5-star reviews
-    const isAmigos =
-      placeName.toLowerCase().includes("amigo") ||
-      inputUrl.toLowerCase().includes("amigo") ||
+    const isLitup =
+      placeName.toLowerCase().includes("litup") ||
+      inputUrl.toLowerCase().includes("litup") ||
       inputUrl.includes("FF8mphjaHEt2PKtC7");
 
-    const reviews = isAmigos
+    const reviews = isLitup
       ? [
           {
             text: "Bestest place with affordable food price and taste wise amazing…. Must visit place for sure 😍",
@@ -232,7 +232,7 @@ export const fetchGoogleReviewsFn = createServerFn({ method: "POST" })
             who: "Shweta Sharma",
           },
           {
-            text: "Love the vibes at Amigo's! It's relaxing and calm. Cheesy loaded pizza and watermelon mojito are absolute perfection. Great place for college students.",
+            text: "Love the vibes at Litup Cafe! It's relaxing and calm. Cheesy loaded pizza and watermelon mojito are absolute perfection. Great place for college students.",
             who: "Bhavna Chalise",
           },
           {

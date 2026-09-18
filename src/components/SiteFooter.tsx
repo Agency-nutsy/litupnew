@@ -30,7 +30,7 @@ export function SiteFooter({
   phone,
   socialLinks,
 }: SiteFooterProps) {
-  // Split name at last space to colour the last word in mustard (matches original "Amigos Hub" styling)
+  // Split name at last space to colour the last word in mustard (matches original "The Litup Cafe" styling)
   const trimmedName = name?.trim() || "Cafe Name";
   const nameParts = trimmedName.split(" ");
   const nameLast = nameParts.length > 1 ? nameParts.pop() ?? "" : "";

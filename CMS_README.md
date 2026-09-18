@@ -100,7 +100,7 @@ Vercel KV (Redis) or Neon (Postgres) backed store. The `getRestaurantData` /
 ## File reference
 
 ```
-src/lib/restaurant-data.ts   — Typed schema + Amigos Hub seed defaults
+src/lib/restaurant-data.ts   — Typed schema + Litup Cafe seed defaults
 src/lib/cms-store.ts         — File-based persistence (Node.js only)
 src/lib/cms-actions.ts       — TanStack Start server functions (public API)
 src/routes/dashboard-x7k2.tsx — Password-gated CMS admin form

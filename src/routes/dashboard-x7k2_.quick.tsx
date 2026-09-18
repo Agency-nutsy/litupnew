@@ -500,7 +500,7 @@ function QuickAdminForm({ initialData }: { initialData: RestaurantData }) {
                   value={data.name}
                   onChange={(e) => setData({ ...data, name: e.target.value })}
                   className={inputCls}
-                  placeholder="e.g. Amigos Hub"
+                  placeholder="e.g. The Litup Cafe"
                 />
               </FieldRow>
 
@@ -1120,7 +1120,7 @@ function QuickAdminForm({ initialData }: { initialData: RestaurantData }) {
                   value={data.storyTeaserBody ?? ""}
                   onChange={(e) => setData({ ...data, storyTeaserBody: e.target.value })}
                   className={`${inputCls} resize-none leading-relaxed`}
-                  placeholder="Amigos Hub opened on the first floor of a tiny Satya Niketan building in 2014 with three tables, one speaker, and a wall full of empty space. Today the walls are covered in sticky-note confessions, the speaker is louder, and there are still never quite enough tables on a Friday night."
+                  placeholder="The Litup Cafe opened on the first floor of a tiny Satya Niketan building in 2014 with three tables, one speaker, and a wall full of empty space. Today the walls are covered in sticky-note confessions, the speaker is louder, and there are still never quite enough tables on a Friday night."
                 />
               </FieldRow>
 
@@ -1175,7 +1175,7 @@ function QuickAdminForm({ initialData }: { initialData: RestaurantData }) {
                       {/* Subtext Body */}
                       <p className="text-[#1F1E1D]/80 text-xs sm:text-sm leading-relaxed max-w-xl">
                         {data.storyTeaserBody ||
-                          "Amigos Hub opened on the first floor of a tiny Satya Niketan building in 2014 with three tables, one speaker, and a wall full of empty space. Today the walls are covered in sticky-note confessions, the speaker is louder, and there are still never quite enough tables on a Friday night."}
+                          "The Litup Cafe opened on the first floor of a tiny Satya Niketan building in 2014 with three tables, one speaker, and a wall full of empty space. Today the walls are covered in sticky-note confessions, the speaker is louder, and there are still never quite enough tables on a Friday night."}
                       </p>
 
                       {/* Read story link */}
@@ -1909,7 +1909,7 @@ function QuickAdminForm({ initialData }: { initialData: RestaurantData }) {
                     value={data.mapsEmbedQuery}
                     onChange={(e) => setData({ ...data, mapsEmbedQuery: e.target.value })}
                     className={`${inputCls} font-mono text-xs`}
-                    placeholder="e.g. https://www.google.com/maps/embed?... or Amigos Hub Satya Niketan"
+                    placeholder="e.g. https://www.google.com/maps/embed?... or The Litup Cafe Hudson Lane"
                   />
                 </FieldRow>
 
@@ -2138,7 +2138,7 @@ function QuickAdminForm({ initialData }: { initialData: RestaurantData }) {
                     })
                   }
                   className={`${inputCls} pl-9`}
-                  placeholder="https://instagram.com/amigos.hub"
+                  placeholder="https://instagram.com/litup.cafe"
                 />
                 <Instagram className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
               </div>
@@ -2201,7 +2201,7 @@ function QuickAdminForm({ initialData }: { initialData: RestaurantData }) {
                   value={data.name}
                   onChange={(e) => setData({ ...data, name: e.target.value })}
                   className={inputCls}
-                  placeholder="e.g. Amigos Hub"
+                  placeholder="e.g. The Litup Cafe"
                 />
               </FieldRow>
 
@@ -2252,7 +2252,7 @@ function QuickAdminForm({ initialData }: { initialData: RestaurantData }) {
                       })
                     }
                     className={`${inputCls} pl-9`}
-                    placeholder="https://instagram.com/amigos.hub"
+                    placeholder="https://instagram.com/litup.cafe"
                   />
                   <Instagram className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>

@@ -69,7 +69,7 @@ Alfredo White Sauce Chicken Pasta ₹280
 Slow-simmered rich creamy white sauce with grilled chicken
 
 BURGERS & SANDWICHES
-Amigos Cheese Blast Burger ₹220
+Litup Cheese Blast Burger ₹220
 Double cheese patty with molten cheese explosion and house sauce
 Crispy Fried Chicken Burger ₹250
 Golden crunchy chicken fillet with iceberg lettuce and secret mayo
@@ -119,7 +119,7 @@ export function AiMenuImporter({ data, setData, onSaveSuccess }: AiMenuImporterP
   // Load saved API Key from localStorage
   useEffect(() => {
     try {
-      const savedKey = localStorage.getItem("amigos_ai_api_key");
+      const savedKey = localStorage.getItem("litup_ai_api_key");
       if (savedKey) setApiKey(savedKey);
     } catch {}
   }, []);
@@ -127,7 +127,7 @@ export function AiMenuImporter({ data, setData, onSaveSuccess }: AiMenuImporterP
   const handleSaveApiKey = (key: string) => {
     setApiKey(key);
     try {
-      localStorage.setItem("amigos_ai_api_key", key);
+      localStorage.setItem("litup_ai_api_key", key);
     } catch {}
   };
 
